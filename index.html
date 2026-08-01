@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#0B211B">
+<title>تسنيم — المصحف والأذكار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- ورد اليوم -->
+  <section class="screen active" id="s-wird"></section>
+  <!-- الأذكار -->
+  <section class="screen" id="s-adhkar"></section>
+  <!-- الصلاة -->
+  <section class="screen" id="s-prayer"></section>
+  <!-- الفهرس -->
+  <section class="screen" id="s-index"></section>
+  <!-- المزيد -->
+  <section class="screen" id="s-more"></section>
+</div>
+
+<!-- قارئ المصحف -->
+<div id="reader">
+  <div class="rbar">
+    <button class="iconbtn" data-action="reader-close">✕</button>
+    <div class="ttl" id="r-title">—</div>
+    <button class="iconbtn" data-action="reader-bookmark">🔖</button>
+  </div>
+  <div class="rpage" id="r-page"></div>
+  <div class="rfoot">
+    <button data-action="page-prev">▶ السابقة</button>
+    <span id="r-num">—</span>
+    <button data-action="page-next">التالية ◀</button>
+  </div>
+</div>
+
+<!-- نافذة سفلية -->
+<div class="sheet" id="sheet"><div class="sheet-in" id="sheet-in"></div></div>
+<div class="toast" id="toast"></div>
+
+<nav class="tabbar">
+  <button data-tab="more"><span class="ti">☰</span>المزيد</button>
+  <button data-tab="index"><span class="ti">📑</span>الفهرس</button>
+  <button data-tab="prayer"><span class="ti">🕌</span>الصلاة</button>
+  <button data-tab="adhkar"><span class="ti">✳</span>الأذكار</button>
+  <button data-tab="wird" class="on"><span class="ti">📖</span>ورد اليوم</button>
+</nav>
+
+<script src="js/quran-meta.js"></script>
+<script src="js/adhkar-data.js"></script>
+<script src="js/prayer-times.js"></script>
+<script src="js/store.js"></script>
+<script src="js/quran.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
